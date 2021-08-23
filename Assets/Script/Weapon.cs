@@ -22,6 +22,12 @@ public class Weapon : MonoBehaviour
             StopCoroutine("Swing");
             StartCoroutine("Swing");
         }
+        else if (type == Type.Hammer)
+        {
+            StopCoroutine("Swing");
+            StartCoroutine("Swing");
+        }
+
         else if (type == Type.Range)
         {
             StartCoroutine("Shot");
@@ -34,10 +40,10 @@ public class Weapon : MonoBehaviour
         meleeArea.enabled = true;
         trailEffect.enabled = true;
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.8f);
         meleeArea.enabled = false;
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.1f);
         trailEffect.enabled = false;
     }
 

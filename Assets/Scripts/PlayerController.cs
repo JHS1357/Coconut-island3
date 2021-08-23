@@ -42,18 +42,18 @@ public class PlayerController : MonoBehaviour
         GetInput();
         Grenade();
 
-        switch (MyWeapon)
-        {
-            case WeaponType.Melee:
-                JoyStick_Double.SetActive(false);
-                JoyStick_Single.SetActive(true);
-                break;
+        //switch (MyWeapon)
+        //{
+        //    case WeaponType.Melee:
+        //        JoyStick_Double.SetActive(false);
+        //        JoyStick_Single.SetActive(true);
+        //        break;
 
-            case WeaponType.Range:
-                JoyStick_Double.SetActive(true);
-                JoyStick_Single.SetActive(false);
-                break;
-        }
+        //    case WeaponType.Range:
+        //        JoyStick_Double.SetActive(true);
+        //        JoyStick_Single.SetActive(false);
+        //        break;
+        //}
 
     }
     void GetInput()
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
     {
         MyWeapon = WeaponType.Melee;
         JoyStick_Double.SetActive(false);
-        JoyStick_Single.SetActive(false);
+        JoyStick_Single.SetActive(true);
     }
     // Update is called once per frame
 

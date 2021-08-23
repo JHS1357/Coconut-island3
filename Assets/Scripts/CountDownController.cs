@@ -35,7 +35,7 @@ public class CountDownController : MonoBehaviour
         GameManager.instance.StartGame();
         //GameManager.instance.SummonEnemy(GameManager.instance.nCurWave);
 
-        TimerController.instance.TimerSet();
+        TimerController.instance.RoundTimerSet();
         countdownDisplay.gameObject.SetActive(false);
     }
     // Start is called before the first frame update

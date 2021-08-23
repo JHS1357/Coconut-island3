@@ -93,12 +93,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => (nMonsterCnt == nUsedMonsterCnt));
 
         //0wave쉬는시간
+        TimerController.instance.BreakTimerSet();
         yield return new WaitForSeconds(waveTermTime);
 
         //-----------------------------------------------
 
         //1wave시작
         nCurWave++;
+        TimerController.instance.RoundTimerSet();
         SummonEnemy(nCurWave);
 
 
@@ -106,6 +108,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => (nMonsterCnt == nUsedMonsterCnt));
 
         //1wave쉬는시간
+        TimerController.instance.BreakTimerSet();
         yield return new WaitForSeconds(waveTermTime);
 
 
@@ -113,6 +116,7 @@ public class GameManager : MonoBehaviour
 
         //2wave시작
         nCurWave++;
+        TimerController.instance.RoundTimerSet();
         SummonEnemy(nCurWave);
 
 
@@ -120,12 +124,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => (nMonsterCnt == nUsedMonsterCnt));
 
         //2wave쉬는시간
+        TimerController.instance.BreakTimerSet();
         yield return new WaitForSeconds(waveTermTime);
 
         //-----------------------------------------------
 
         //3wave시작
         nCurWave++;
+        TimerController.instance.RoundTimerSet();
         SummonEnemy(nCurWave);
 
 
