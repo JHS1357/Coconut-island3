@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
@@ -31,10 +30,12 @@ public class SoundManager : MonoBehaviour
         AudioSource audioSource = go.AddComponent<AudioSource>();
         audioSource.clip = clip;
         audioSource.Play();
+        audioSource.volume = EFFVolume;
 
         Destroy(go, clip.length);
     }
 }
+
 /*
     public AudioSource bgSound;
     public AudioClip[] bglist;

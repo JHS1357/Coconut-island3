@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 245c3c92bf912944a9d7cddf809a723c, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -4688,6 +4688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeMap_menu
       objectReference: {fileID: 0}
+    - target: {fileID: 6237185469275857513, guid: f542e8ebb925f6e439a0bab90fb6ec53, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 9b2d77933b3ea154783b341524132d44, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f542e8ebb925f6e439a0bab90fb6ec53, type: 3}
 --- !u!1 &1744677330
@@ -5155,8 +5159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22aa86d5a9fcda47b4fb0e407417309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMVolume: 1
-  EFFVolume: 1
+  BGMVolume: 0.1
+  EFFVolume: 0.5
 --- !u!4 &1844885297
 Transform:
   m_ObjectHideFlags: 0

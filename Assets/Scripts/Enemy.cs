@@ -31,7 +31,6 @@ public class Enemy : MonoBehaviour
         myAnimator = GetComponentInChildren<Animator>();
         myAnimator.SetBool("Walk Forward", true);
 
-
         GameObject obj = Instantiate(Resources.Load("Prefabs/MiniMapIcon") as GameObject);
         myMinimapicon = obj.GetComponent<MinimapIcon>();
         myMinimapicon.Initalize(this.transform);
@@ -54,7 +53,6 @@ public class Enemy : MonoBehaviour
         {
             GetNextWayPoint();
         }
-
     }
 
     void GetNextWayPoint()
@@ -68,6 +66,9 @@ public class Enemy : MonoBehaviour
             this.gameObject.SetActive(false);
             GameManager.instance.nUsedMonsterCnt++;
             myMinimapicon.gameObject.SetActive(false);
+
+            CoconutLife.instance.EnemyEntry();
+
             return;
         }
 
@@ -87,7 +88,6 @@ public class Enemy : MonoBehaviour
             myMinimapicon.gameObject.SetActive(false);
             StartCoroutine(EnemyDie());
             return;
-
         }
         else
             myAnimator.SetTrigger("Take Damage");

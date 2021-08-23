@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ButtonCtrl : MonoBehaviour
@@ -25,7 +26,12 @@ public class ButtonCtrl : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("combineScene");
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LevelSelect()

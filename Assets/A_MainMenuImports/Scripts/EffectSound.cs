@@ -17,7 +17,7 @@ public class EffectSound : MonoBehaviour
 
     public void EffectPlay()
     {
-        audioSource.clip = audioClips[Random.RandomRange(0, audioNum)];
+        audioSource.clip = audioClips[Random.Range(0, audioNum)];
         audioSource.Play();
     }
 }

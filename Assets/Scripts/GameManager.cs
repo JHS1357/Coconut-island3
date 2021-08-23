@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     {
         //StartGame은 CountDownController에서 소환.
         StartCoroutine(GameRoutine());
-
+        CoconutLife.instance.life = 3;
     }
 
     /// <summary>
